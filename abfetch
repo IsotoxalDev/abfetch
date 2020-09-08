@@ -1,0 +1,21 @@
+#!/bin/bash
+
+Red='\033[1;31m'
+Blue='\033[1;34m'
+Yellow='\033[1;33m'
+NC='\033[1;0m'
+User=$USER
+Hostname=$(hostname)
+Os=$(uname -o)
+Kernel=$(uname -r)
+Temp=$(uptime -p)
+Uptime=($(echo $Temp | tr " " "\n"))
+Memory=$(free -m | grep Mem | awk 'OFS=" / " {print $3,$2}')
+
+echo -e "${Red}$(<logo.sf)"
+echo -e "${NC}_______________________\n"
+echo -e "${Yellow}${User}${NC}@${Yellow}${Hostname}"
+echo -e "${Blue}os     ${NC}${Os}"
+echo -e "${Blue}kernel ${NC}${Kernel}"
+echo -e "${Blue}Uptime ${NC}${Uptime[1]}h ${Uptime[3]}m"
+echo -e "${Blue}Memory ${NC}${Memory}"
