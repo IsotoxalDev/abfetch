@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mkdir ~/.config/abfetch
-cp logo.sf ~/.config/abfetch
+sudo mkdir /etc/abfetch
+sudo cp logo.sf /etc/abfetch
 sudo cp abfetch /usr/bin
