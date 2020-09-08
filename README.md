@@ -16,5 +16,8 @@ Then run the install file
 To use abfetch open a terminal and run pfetch by
 > ```abfetch```
 
+## Change Logo
+To change the logo copy any ascii image text to ```/etc/abfetch/logo.sf```
+
 ## Contribution
 To Contribute fork this repositiory and make changes and start a pull request.
