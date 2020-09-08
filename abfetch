@@ -12,7 +12,7 @@ Temp=$(uptime -p)
 Uptime=($(echo $Temp | tr " " "\n"))
 Memory=$(free -m | grep Mem | awk 'OFS=" / " {print $3,$2}')
 
-echo -e "${Red}$(<logo.sf)"
+echo -e "${Red}$(<~/.config/abfetch/logo.sf)"
 echo -e "${NC}_______________________\n"
 echo -e "${Yellow}${User}${NC}@${Yellow}${Hostname}"
 echo -e "${Blue}os     ${NC}${Os}"
